@@ -6,3 +6,7 @@ const db = client.db("book")
 export const auth = betterAuth({
     database: mongodbAdapter( db,{client}),
 });
+
+
+
+
