@@ -1,5 +1,5 @@
 "use client";
-import { useSession } from "@/lib/auth-client";
+import { authClient } from "@/app/lib/auth-client";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";
 import books from "@/data/books";
@@ -7,7 +7,7 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 
 export default function BookDetailsPage({ params }) {
-  const { data: session, isPending } = useSession();
+  const { data: session, isPending } = authClient();
   const router = useRouter();
   const book = books.find((b) => b.id === params.id);
 
