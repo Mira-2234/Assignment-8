@@ -16,17 +16,17 @@ export default function RegisterPage() {
     setLoading(true);
     setErrorMsg("");
 
-    const name = e.target.name.value;
-    const email = e.target.email.value;
-    const image = e.target.image.value;
-    const password = e.target.password.value;
+    const formData = new FormData(e.target);
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const image = formData.get("image") || "";
+    const password = formData.get("password");
 
-    const { data, error } = await authClient.signUp.email({
+    const { error } = await authClient.signUp.email({
       name,
       email,
       password,
       image: image || undefined,
-      callbackURL: "/login",
     });
 
     setLoading(false);
@@ -62,6 +62,8 @@ export default function RegisterPage() {
         )}
 
         <form onSubmit={onSubmit} className="space-y-4">
+
+          {/* Name */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Full Name <span className="text-red-500">*</span>
@@ -75,6 +77,7 @@ export default function RegisterPage() {
             />
           </div>
 
+          {/* Email */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Email <span className="text-red-500">*</span>
@@ -88,8 +91,9 @@ export default function RegisterPage() {
             />
           </div>
 
-    
+      
 
+          {/* Password */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
               Password <span className="text-red-500">*</span>
@@ -104,6 +108,7 @@ export default function RegisterPage() {
             />
           </div>
 
+          {/* Submit */}
           <button
             type="submit"
             disabled={loading}

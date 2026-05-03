@@ -1,19 +1,17 @@
 import { betterAuth } from "better-auth";
-import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import { MongoClient } from "mongodb";
 
 const client = new MongoClient(process.env.MONGODB_URI);
 
+// connection আগে করো
+const db = (await client.connect()).db("book");
+
 export const auth = betterAuth({
-  database: mongodbAdapter(client, {
-    dbName: "book",
-  }),
+  database: mongodbAdapter(db),
   secret: process.env.BETTER_AUTH_SECRET,
   baseURL: process.env.BETTER_AUTH_URL,
-  trustedOrigins: [
-    "http://localhost:3000",
-    
-  ],
+  trustedOrigins: ["http://localhost:3000"],
   emailAndPassword: {
     enabled: true,
     autoSignIn: true,
