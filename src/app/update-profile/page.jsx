@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { useSession, updateUser } from "@/lib/auth-client";
+import { useSession, updateUser } from "@/app/lib/auth-client";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 

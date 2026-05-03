@@ -30,7 +30,7 @@ function AllBooksContent() {
       <div className="mb-8">
         <input
           type="text"
-          placeholder="🔍  Search books by title..."
+          placeholder="Search books by title..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full border border-gray-200 rounded-2xl px-6 py-4 text-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-400 bg-white"
