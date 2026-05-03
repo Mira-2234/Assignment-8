@@ -1,7 +1,7 @@
 "use client";
-import { useState } from "react";
-import { useSession, updateUser } from "@/app/lib/auth-client";
+import { useSession, authClient } from "@/app/lib/auth-client";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import toast from "react-hot-toast";
 
 export default function UpdateProfilePage() {
@@ -11,55 +11,103 @@ export default function UpdateProfilePage() {
   const [image, setImage] = useState("");
   const [loading, setLoading] = useState(false);
 
-  if (isPending) return <div className="min-h-screen flex items-center justify-center"><div className="animate-spin text-4xl">⏳</div></div>;
-  if (!session) { router.push("/login"); return null; }
+  useEffect(() => {
+    if (!isPending && !session) {
+      router.push("/login");
+    }
+    if (session) {
+      setName(session.user.name || "");
+      setImage(session.user.image || "");
+    }
+  }, [session, isPending, router]);
+
+  if (isPending) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <span className="loading loading-spinner loading-lg text-blue-700"></span>
+      </div>
+    );
+  }
+
+  if (!session) return null;
 
   const handleUpdate = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const updateData = {};
-    if (name.trim()) updateData.name = name.trim();
-    if (image.trim()) updateData.image = image.trim();
-    const { error } = await updateUser(updateData);
+
+    const { error } = await authClient.updateUser({
+      name: name || undefined,
+      image: image || undefined,
+    });
+
     setLoading(false);
+
     if (error) {
       toast.error(error.message || "Update failed");
     } else {
-      toast.success("Profile updated! 🎉");
+      toast.success("Profile updated successfully! 🎉");
       router.push("/my-profile");
     }
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-100 flex items-center justify-center px-4">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-blue-100 flex items-center justify-center px-4">
       <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
+
         <div className="text-center mb-8">
-          <div className="text-5xl mb-3">✏️</div>
           <h1 className="text-3xl font-bold text-gray-800">Update Profile</h1>
-          <p className="text-gray-500 mt-1">Update your name or profile picture</p>
+          <p className="text-gray-500 mt-1">Change your name or photo</p>
         </div>
+
         <form onSubmit={handleUpdate} className="space-y-5">
+
+          {/* Name */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">New Name</label>
-            <input type="text" value={name} onChange={(e) => setName(e.target.value)}
-              placeholder={session.user.name || "Enter new name"}
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              New Name
+            </label>
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Enter new name"
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             />
           </div>
+
+          {/* Image URL */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-1">New Photo URL</label>
-            <input type="url" value={image} onChange={(e) => setImage(e.target.value)}
+            <label className="block text-sm font-medium text-gray-700 mb-1">
+              New Photo URL
+            </label>
+            <input
+              type="url"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
               placeholder="https://example.com/photo.jpg"
-              className="w-full border border-gray-200 rounded-xl px-4 py-3 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
             />
           </div>
-          <button type="submit"
-            disabled={loading || (!name.trim() && !image.trim())}
-            className="w-full bg-emerald-600 text-white py-3 rounded-xl font-semibold text-lg hover:bg-emerald-700 transition disabled:opacity-50"
+
+          {/* Submit */}
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full bg-blue-700 text-white py-3 rounded-xl font-semibold hover:bg-blue-800 transition disabled:opacity-60"
           >
-            {loading ? "Updating..." : "Update Information"}
+            {loading ? (
+              <span className="flex items-center justify-center gap-2">
+                <span className="loading loading-spinner loading-sm"></span>
+                Updating...
+              </span>
+            ) : (
+              "Update Information"
+            )}
           </button>
-          <button type="button" onClick={() => router.back()}
+
+          <button
+            type="button"
+            onClick={() => router.back()}
             className="w-full border border-gray-200 py-3 rounded-xl font-medium text-gray-600 hover:bg-gray-50 transition"
           >
             Cancel
