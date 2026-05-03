@@ -23,8 +23,8 @@ const Navbar = () => {
       <div className="navbar-start">
         <Link href="/">
           <h2 className='flex gap-2 font-bold text-4xl'>
-            <GiSpellBook className='text-blue-800 text-4xl' /> Book
-            <span className='text-4xl font-bold text-blue-700'>Nest</span>
+            <GiSpellBook className='text-blue-800 text-4xl' /> Online
+            <span className='text-4xl font-bold text-blue-700'>Book</span>
           </h2>
         </Link>
       </div>

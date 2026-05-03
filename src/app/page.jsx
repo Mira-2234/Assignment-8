@@ -27,11 +27,13 @@ export default function HomePage() {
               <BookCard key={book.id} book={book} />
             ))}
           </div>
+            {/* About Section */}
+            <About /> 
         </section>
 
         {/* Why BookNest */}
-        <section className="bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl p-10">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">Why BookNest?</h2>
+        <section className="bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl p-10 my-30">
+          <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">Why Online Book?</h2>
           <p className="text-center text-gray-500 mb-10">Everything you need in a modern digital library</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
@@ -49,8 +51,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About Section */}
-        <About />  {/* ← এখানে */}
 
       </div>
     </div>

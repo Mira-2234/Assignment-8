@@ -4,9 +4,9 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="flex flex-col md:flex-row items-center gap-10 bg-white rounded-3xl shadow-lg p-10 border border-gray-100">
+    <section className="flex flex-col md:flex-row items-center gap-10 bg-white rounded-3xl shadow-lg p-10 border border-gray-100 mt-20">
       
-      {/* Left — Image */}
+      {/* Image */}
       <div className="flex-1 flex justify-center">
         <img
           src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
@@ -18,7 +18,7 @@ export default function About() {
       {/* Right — Content */}
       <div className="flex-1">
         <h2 className="text-4xl font-bold text-gray-800 mb-4">
-          About <span className="text-blue-700">BookNest</span>
+          About <span className="text-blue-700">Online Book</span>
         </h2>
 
         <p className="text-gray-500 leading-relaxed mb-4">

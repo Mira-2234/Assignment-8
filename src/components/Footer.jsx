@@ -4,12 +4,12 @@ import { GiSpellBook } from "react-icons/gi";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-gray-300 mt-47">
+    <footer className="bg-gray-900 text-gray-300 ">
       <div className="max-w-7xl mx-auto px-30 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         {/* Brand */}
         <div>
-            <h2 className='flex gap-2 font-bold text-4xl'><GiSpellBook className='text-white text-4xl ' /> Book 
-                   <span className='text-4xl font-bold text-blue-700'>Nest</span>
+            <h2 className='flex gap-2 font-bold text-4xl'><GiSpellBook className='text-white text-4xl ' /> Online
+                   <span className='text-4xl font-bold text-blue-700'>Book</span>
                </h2>
           <p className="text-sm leading-relaxed">
             Your digital library. Explore, borrow, and enjoy thousands of titles from the comfort of your home.

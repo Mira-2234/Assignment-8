@@ -31,8 +31,8 @@ export default function HeroSection() {
               Browse Now
             </button>
 
-            <button className="btn btn-outline btn-lg shadow-sm hover:bg-blue-700 hover:text-white hover:shadow-sm hover:shadow-blue-600 border-none rounded-2xl">
-              Explore Categories
+            <button className="btn btn-outline btn-lg shadow-sm hover:bg-gray-100 hover:shadow-sm hover:shadow-gray-200 border-none rounded-2xl">
+              Explore 
             </button>
           </div>
         </div>
