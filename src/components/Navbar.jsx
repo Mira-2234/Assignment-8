@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div className="navbar bg-base-100 py-2 min-h-0 px-20 shadow-lg mt-2">
       
-      {/* LEFT — Logo */}
+      {/* Logo */}
       <div className="navbar-start">
         <Link href="/">
           <h2 className='flex gap-2 font-bold text-4xl'>
@@ -29,7 +29,7 @@ const Navbar = () => {
         </Link>
       </div>
 
-      {/* CENTER — Nav Links */}
+      {/* Nav Links */}
       <div className="navbar-center hidden md:flex items-center gap-5 font-medium text-gray-700">
         <Link href="/" className="hover:text-blue-700 transition">Home</Link>
         <Link href="/all-books" className="whitespace-nowrap hover:text-blue-700 transition">All Books</Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
         )}
       </div>
 
-      {/* RIGHT — Auth */}
+      {/* Right */}
       <div className="navbar-end gap-3">
         {session ? (
           <div className="hidden md:flex items-center gap-3">
@@ -53,11 +53,15 @@ const Navbar = () => {
             </button>
           </div>
         ) : (
-          <Link href="/login" className="hidden md:flex btn btn-primary btn-sm">
-            Login
-          </Link>
-        )}
-
+       <div className="hidden md:flex items-center gap-2">
+      <Link href="/login" className="btn btn-primary btn-sm">
+      Login
+    </Link>
+    <Link href="/register" className="btn btn-outline btn-primary btn-sm">
+      Register
+    </Link>
+     </div>
+)}
         {/* Mobile Hamburger */}
         <div className="dropdown dropdown-end md:hidden">
           <div tabIndex={0} role="button" className="mr-6 btn btn-ghost lg:hidden">
