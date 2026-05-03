@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "BookNest - Online Book Borrowing",
+  title: "Online Book - Online Book Borrowing",
   description: "Borrow books digitally from our vast collection",
 };
 

@@ -1,7 +1,7 @@
 import Banner from "@/components/Banner";
 import MarqueeBar from "@/components/MarqueeBar";
 import BookCard from "@/components/BookCard";
-import About from "@/components/About";  // ← এটা add করো
+import About from "@/components/About"; 
 import books from "@/data/books";
 import Link from "next/link";
 import { FaBolt, FaShieldAlt, FaMobileAlt, FaInfinity } from "react-icons/fa";

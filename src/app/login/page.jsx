@@ -48,7 +48,7 @@ export default function LoginPage() {
       <div className="bg-white rounded-3xl shadow-2xl p-8 w-full max-w-md">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800">Login</h1>
-          <p className="text-gray-500 mt-1">Welcome back to BookNest!</p>
+          <p className="text-gray-500 mt-1">Welcome back to OnlineBook!</p>
         </div>
 
         {errorMsg && (
