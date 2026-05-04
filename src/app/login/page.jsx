@@ -110,7 +110,7 @@ export default function LoginPage() {
           onClick={handleGoogleSignIn}
           className="w-full border border-gray-200 py-3 rounded-xl font-medium text-sm text-gray-700 hover:bg-gray-50 transition flex items-center justify-center gap-3"
         >
-          <GrGoogle />
+          <GrGoogle className="hover:cursor-pointer" />
           Continue with Google
         </button>
 

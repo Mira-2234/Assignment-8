@@ -1,10 +1,3 @@
-// Problem:
-// Next.js development mode এ React Strict Mode এর কারণে component double render হয়
-// এজন্য সবকিছু duplicate মনে হচ্ছে
-
-// FIX:
-// next.config.mjs
-
 const nextConfig = {
   reactStrictMode: false,
   images: {
@@ -16,7 +9,7 @@ const nextConfig = {
       },
        {
         protocol: "https",
-        hostname: "*.googleusercontent.com", // সব Google image
+        hostname: "*.googleusercontent.com", 
       },
     ],
   },
