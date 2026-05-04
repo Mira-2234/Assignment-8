@@ -14,6 +14,10 @@ const nextConfig = {
         protocol: "https",
         hostname: "covers.openlibrary.org",
       },
+       {
+        protocol: "https",
+        hostname: "*.googleusercontent.com", // সব Google image
+      },
     ],
   },
 };
