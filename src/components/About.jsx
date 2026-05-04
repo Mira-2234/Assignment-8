@@ -10,7 +10,7 @@ export default function About() {
       <div className="flex-1 flex justify-center">
         <img
           src="https://img.freepik.com/free-vector/hand-drawn-flat-design-stack-books-illustration_23-2149341898.jpg"
-          alt="BookNest Library"
+          alt="Online book Library"
           className="rounded-2xl shadow-md w-full max-w-sm object-cover"
         />
       </div>

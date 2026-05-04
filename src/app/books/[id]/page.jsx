@@ -7,7 +7,7 @@ import Image from "next/image";
 import toast from "react-hot-toast";
 
 export default function BookDetailsPage({ params }) {
-  const { id } = use(params); // ← Next.js 15 এ এভাবে করতে হবে
+  const { id } = use(params); 
   const { data: session, isPending } = useSession();
   const router = useRouter();
   const book = books.find((b) => b.id === id);

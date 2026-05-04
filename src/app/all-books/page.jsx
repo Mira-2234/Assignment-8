@@ -41,7 +41,7 @@ function AllBooksContent() {
         <div className="flex-1">
           {filtered.length === 0 ? (
             <div className="text-center py-20 text-gray-500">
-              <div className="text-6xl mb-4">📭</div>
+              
               <p className="text-xl font-medium">No books found</p>
               <p className="text-sm mt-2">Try a different search or category</p>
             </div>

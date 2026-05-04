@@ -4,7 +4,7 @@ import { MongoClient } from "mongodb";
 
 const client = new MongoClient(process.env.MONGODB_URI);
 
-// connection আগে করো
+
 const db = (await client.connect()).db("book");
 
 export const auth = betterAuth({

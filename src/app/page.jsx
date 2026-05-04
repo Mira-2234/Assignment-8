@@ -31,7 +31,7 @@ export default function HomePage() {
             <About /> 
         </section>
 
-        {/* Why BookNest */}
+        {/* Why online book*/}
         <section className="bg-gradient-to-r from-blue-100 to-blue-50 rounded-3xl p-10 my-30">
           <h2 className="text-3xl font-bold text-gray-800 mb-2 text-center">Why Online Book?</h2>
           <p className="text-center text-gray-500 mb-10">Everything you need in a modern digital library</p>
