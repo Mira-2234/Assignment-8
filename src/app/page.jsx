@@ -12,7 +12,7 @@ export default function HomePage() {
   return (
     <div>
       <Banner />
-      <MarqueeBar />
+      {/* <MarqueeBar /> */}
 
       <div className="max-w-7xl mx-auto px-20 py-10 space-y-16">
 

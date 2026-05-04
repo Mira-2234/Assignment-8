@@ -10,7 +10,7 @@ const news = [
 
 const BreakingNews = () => {
     return (
-        <div className='flex justify-between items-center gap-4 bg-blue-100 py-2 px-2 text-black text-[14px] '>
+        <div className='flex justify-between items-center gap-4  py-2 px-2 text-gray-100 text-[14px] '>
     
             <Marquee pauseOnHover={true}>
                 {news.map((n)=> {
