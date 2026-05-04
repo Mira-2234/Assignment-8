@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 📚  Online Book Platform
 
-## Getting Started
+BookNest is a modern, secure, and fully responsive online book platform built with **Next.js**, **Tailwind CSS**, **DaisyUI**, **BetterAuth**, and **MongoDB**.
 
-First, run the development server:
+It offers users a seamless digital reading experience where they can discover, explore, and borrow books online anytime, anywhere.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🌐 Live Website
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+**Live URL:** [https://your-live-link-here.com](https://assignment-8-kkw2.vercel.app/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎯 Project Purpose
 
-To learn more about Next.js, take a look at the following resources:
+BookNest was developed to create a user-friendly online book platform that simplifies access to books digitally.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Users can:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+* Browse books online
+* Search books by title
+* Filter books by category
+* Borrow books digitally
+* Register/Login securely
+* Manage profiles easily
+* Access books from any device
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔹 Core Functionalities
+
+* Responsive Navbar with authentication
+* Dynamic Home Page with:
+
+  * Hero Banner
+  * Marquee section
+  * Featured books
+* All Books page with:
+
+  * Search functionality
+  * Category sidebar filtering
+* Private Book Details page
+* Digital borrowing system
+* My Profile page
+* User profile update system
+
+---
+
+### 🔹 Authentication Features
+
+* User Registration
+* User Login
+* Google Social Login
+* BetterAuth secure authentication
+* Protected private routes
+
+---
+
+### 🔹 Design & Experience
+
+* Fully responsive UI
+* Modern online book platform theme
+* Clean design
+* Interactive user interface
+* Fast loading performance
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend:
+
+* Next.js
+* React.js
+* Tailwind CSS
+* DaisyUI
+
+### Backend:
+
+* BetterAuth
+* MongoDB Atlas
+
+### Deployment:
+
+* Vercel
+
+---
+
+## 📦 NPM Packages Used
+
+* better-auth
+* mongodb
+* react-hot-toast
+* react-icons
+* daisyui
+* tailwindcss
+
+---
+
+
+## 📱 Responsiveness
+
+* Mobile ✅
+* Tablet ✅
+* Desktop ✅
+
+---
+
+## ✨ Advanced Features
+
+* User information update
+* Category-based filtering
+* Swiper slider integration
+* Google authentication
+* Secure route protection
+
+---
+
+## 📌 Future Enhancements
+
+* Reading history
+* Wishlist
+* Admin dashboard
+* Book reviews
+* Personalized recommendations
+
+---
+
